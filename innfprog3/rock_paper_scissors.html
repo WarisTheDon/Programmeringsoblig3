@@ -142,21 +142,7 @@
             <!-- HTML element to show computer selection -->
         </div>
         <div id="winner">
-            <script>
-                            const winnerDiv = document.getElementById("winner");
-                    if (winner === "computer") {
-                        winnerDiv.style.backgroundColor = "red"; // Datamaskinen vant, bruk rød bakgrunnsfarge
-                    } else if (winner === "player") {
-                        winnerDiv.style.backgroundColor = "green"; // Spilleren vant, bruk grønn bakgrunnsfarge
-                    } else {
-                        winnerDiv.style.backgroundColor = "gray"; // Uavgjort, bruk grå bakgrunnsfarge eller en annen ønsket farge
-                    }
-                                    
-
-
-
-            </script>
-           
+          
             
             <!-- HTML element to show winner -->
         </div>
@@ -168,7 +154,8 @@
     </section>
 
     <script>
-        
+
+     
         //We'll prepare an empty variable that later will contain the winner
         let winner = ""
         //And prepare a counter-variable for number of games played:
@@ -267,6 +254,15 @@
                     winner = "player"
                 }
             }
+            if (winner === "player") {
+
+                document.getElementById("winner").style.backgroundColor = "#FFD700"; 
+                } 
+                else { 
+                document.getElementById("winner").style.backgroundColor = "var(--green)";
+
+                }
+
             //Now we have checks to set the winner. Let's write it to the website.
             //Now you know the drill: show #winner by display: block and fill it with HTML:
             const winnerDiv = document.getElementById("winner")
